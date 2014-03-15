@@ -5,6 +5,13 @@
   var QS              = require('querystring');
   var Q               = require('q');
 
+  // API method classes.
+  var SickbeardEpisode = require('./sickbeard-episode');
+  var SickbeardHistory = require('./sickbeard-history');
+  var SickbeardSB = require('./sickbeard-sb');
+  var SickbeardShow = require('./sickbeard-show');
+  var SickbeardShows = require('./sickbeard-shows');
+
   /**
    * Main Sickbeard API class.
    * 
@@ -22,6 +29,13 @@
     this.version = 1;
     // Is this a invalid API url?
     this.invalid  = false;
+
+    // instantiate API method classes
+    this.episode = new SickbeardEpisode(this);
+    this.history = new SickbeardHistory(this);
+    this.sb = new SickbeardSB(this);
+    this.show = new SickbeardShow(this);
+    this.shows = new SickbeardShows(this);
 
     // Attach API endpoint to url
     if (url.indexOf('/api') == -1) {
