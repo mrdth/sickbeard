@@ -124,7 +124,9 @@
         defer.reject(error);
       }
       else {
-        body = JSON.parse(body);
+        if (response.headers['content-type'].indexOf('application/json') != -1) {
+          body = JSON.parse(body);
+        }
         defer.resolve(body);
       }
     });
