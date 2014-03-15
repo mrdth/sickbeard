@@ -1,6 +1,4 @@
 (function() {
-  var Q  = require('q');
-  var QS = require('querystring');
 
   // Sickbeard shows class
   var SickbeardShows = function(delegate) {
