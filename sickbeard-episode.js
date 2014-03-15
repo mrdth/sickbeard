@@ -7,8 +7,8 @@
   };
 
   /**
-   * Call the 'episode' method of the API, and return the data
-   * from the call.
+   * Retrieve the information of a specific episode matching the corresponding
+   * tvdbid, season and episode number.
    *
    * @param object args
    *   Arguments to be passed with the call:
@@ -29,8 +29,8 @@
   };
 
   /**
-   * Call the 'episode.search' method of the API, and return the data
-   * from the call.
+   * Initiate a search for a specific episode matching the corresponding tvdbid,
+   * season and episode number.
    *
    * @param object args
    *   Arguments to be passed with the call:
@@ -51,8 +51,7 @@
   };
 
   /**
-   * Call the 'episode.status' method of the API, and return the data
-   * from the call.
+   * Set the status of an epsiode or season.
    *
    * @param object args
    *   Arguments to be passed with the call:
