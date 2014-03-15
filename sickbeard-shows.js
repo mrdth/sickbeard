@@ -6,8 +6,7 @@
   };
 
   /**
-   * Call the 'shows' method of the API, and return the data
-   * from the call.
+   * Retrieve a list of all shows in SickBeard.
    *
    * @param object args
    *   Optional arguments to be passed with the call.
@@ -26,8 +25,7 @@
   };
 
   /**
-   * Call the 'stats' method of the API, and return the data
-   * from the call.
+   * Retrieve global episode and show statistics.
    *
    * @return object
    *   JSON object describing global episode and show statistics.

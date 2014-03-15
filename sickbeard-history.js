@@ -7,8 +7,7 @@
   };
 
   /**
-   * Call the 'history' method of the API, and return the data
-   * from the call.
+   * Retrieve SickBeard's downloaded/snatched history.
    *
    * @param object args
    *   Optional arguments to be passed with the call.
@@ -26,8 +25,7 @@
   };
 
   /**
-   * Call the 'history.trim' method of the API, and return the data
-   * from the call.
+   * Trim SickBeard's history by removing entries greater than 30 days old.
    *
    * @return object
    *
@@ -42,8 +40,7 @@
   };
 
   /**
-   * Call the 'history.clear' method of the API, and return the data
-   * from the call.
+   * Clear SickBeard's history.
    *
    * @return object
    *
