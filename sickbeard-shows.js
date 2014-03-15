@@ -8,10 +8,10 @@
   /**
    * Call the 'shows' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @param object args
    *   Optional arguments to be passed with the call.
-   *   
+   *
    * @return object
    *   JSON object describing the shows in the Sickbeard list.
    *
@@ -21,14 +21,14 @@
     var delegate  = this.delegate;
 
     return delegate.cmd('shows', args).then(function(response){
-      return response.data;
+      return response;
     });
   };
 
   /**
    * Call the 'stats' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @return object
    *   JSON object describing global episode and show statistics.
    */
@@ -36,7 +36,7 @@
     var delegate  = this.delegate;
 
     return delegate.cmd('shows.stats').then(function(response){
-      return response.data;
+      return response;
     });
   };
 

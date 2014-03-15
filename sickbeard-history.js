@@ -9,11 +9,11 @@
   /**
    * Call the 'history' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @param object args
    *   Optional arguments to be passed with the call.
-   *   
-   * @return array
+   *
+   * @return object
    *
    * @see http://sickbeard.com/api/#history
    */
@@ -21,14 +21,14 @@
     var delegate  = this.delegate;
 
     return delegate.cmd('history', args).then(function(response){
-      return response.data;
+      return response;
     });
   };
 
   /**
    * Call the 'history.trim' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @return object
    *
    * @see http://sickbeard.com/api/#history.trim
@@ -44,7 +44,7 @@
   /**
    * Call the 'history.clear' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @return object
    *
    * @see http://sickbeard.com/api/#history.clear

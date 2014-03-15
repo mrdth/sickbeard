@@ -9,13 +9,13 @@
   /**
    * Call the 'episode' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @param object args
    *   Arguments to be passed with the call:
    *     tvdbid:  tvdbid unique show id
    *     season:  season number
    *     episode: episode number
-   *   
+   *
    * @return object
    *
    * @see http://sickbeard.com/api/#episode
@@ -24,20 +24,20 @@
     var delegate  = this.delegate;
 
     return delegate.cmd('episode', args).then(function(response){
-      return response.data;
+      return response;
     });
   };
 
   /**
    * Call the 'episode.search' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @param object args
    *   Arguments to be passed with the call:
    *     tvdbid:  tvdbid unique show id
    *     season:  season number
    *     episode: episode number
-   *   
+   *
    * @return array
    *
    * @see http://sickbeard.com/api/#episode.search
@@ -46,21 +46,21 @@
     var delegate  = this.delegate;
 
     return delegate.cmd('episode.search', args).then(function(response){
-      return response.data;
+      return response;
     });
   };
 
   /**
    * Call the 'episode.status' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @param object args
    *   Arguments to be passed with the call:
    *     tvdbid:  tvdbid unique show id
    *     season:  season number
    *     episode: episode number
    *     status:  wanted, skipped, archived, ignored
-   * 
+   *
    * @return array
    *
    * @see http://sickbeard.com/api/#episode.status
@@ -69,7 +69,7 @@
     var delegate  = this.delegate;
 
     return delegate.cmd('episode.status', args).then(function(response){
-      return response.data;
+      return response;
     });
   };
 

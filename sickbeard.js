@@ -14,7 +14,7 @@
 
   /**
    * Main Sickbeard API class.
-   * 
+   *
    * @param string url
    *   URL of the sickbeard server, including port.
    * @param string apikey
@@ -44,7 +44,7 @@
     this.url = url;
 
     var _this = this;
-    
+
     // Check for valid API key && get API version.
     this.cmd('sb')
       .then(function(response) {
@@ -71,10 +71,10 @@
   /**
    * Call the 'future' method of the API, and return the data
    * from the call.
-   * 
+   *
    * @param object args
    *   Optional arguments to be passed with the call.
-   *   
+   *
    * @return object
    *   JSON object describing the shows in the Sickbeard list.
    *
@@ -82,18 +82,18 @@
    */
   Sickbeard.prototype.future = function(args) {
     return this.cmd('future', args).then(function(response){
-      return response.data;
+      return response;
     });
   };
 
   /**
    * Perform a command request against the API.
-   * 
+   *
    * @param  string command
    *   The command to call.
    * @param  string || array args
    *   Any arguments to pass with command.
-   *   
+   *
    * @return object
    *   deferred promise.
    */
