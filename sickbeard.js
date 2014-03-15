@@ -69,6 +69,24 @@
   };
 
   /**
+   * Call the 'future' method of the API, and return the data
+   * from the call.
+   * 
+   * @param object args
+   *   Optional arguments to be passed with the call.
+   *   
+   * @return object
+   *   JSON object describing the shows in the Sickbeard list.
+   *
+   * @see http://sickbeard.com/api/#future
+   */
+  Sickbeard.prototype.future = function(args) {
+    return this.cmd('future', args).then(function(response){
+      return response.data;
+    });
+  };
+
+  /**
    * Perform a command request against the API.
    * 
    * @param  string command
