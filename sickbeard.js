@@ -69,6 +69,41 @@
   };
 
   /**
+   * Get a list of the SickBeard API methods inplemented, along with the URL
+   * to their description on sickbeard.com
+   *
+   * @return array
+   *   Array of objects containing;
+   *     method: the method name,
+   *     apiMethod: It's SickBeard API equivalent
+   *     url: URL to the sickebeard.com API doc for this method.
+   */
+  Sickbeard.prototype.implements = function() {
+    var y = [];
+    [
+      {name: 'SickbeardEpisode', method: SickbeardEpisode},
+      {name: 'SickbeardHistory', method: SickbeardHistory},
+      {name: 'SickbeardSB', method: SickbeardSB},
+      {name: 'SickbeardShow', method: SickbeardShow},
+      {name: 'SickbeardShow', method: SickbeardShows}
+    ].map(function(obj){
+      var x = obj.method.prototype;
+
+      for (i in x) {
+        api = obj.name.replace('Sickbeard', '').toLowerCase() + (i == 'self' ? '' : "." + i);
+        url ='http://sickbeard.com/api/#' + api.replace('.','');
+        y.push({
+          method: obj.name + '.' + i,
+          apiMethod: api,
+          url: url
+        });
+      }
+
+    });
+    return y;
+  };
+
+  /**
    * Call the 'future' method of the API, and return the data
    * from the call.
    *
