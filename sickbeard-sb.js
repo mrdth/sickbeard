@@ -189,4 +189,74 @@
     });
   };
 
+  /**
+   *	Search TVDB for a show with a given string or tvdbid.
+   *
+   *   @param object args
+   *   Arguments to be passed with the call:
+   *     name	show name
+   *     tvdbid tvdbid unique show id
+   *     lang two letter tvdb language, en = english
+   *     		[en], zh, hr, cs, da, nl, fi, fr, de, el, he, hu, it, ja, ko, no, pl, pt, ru, sl, es, sv, tr
+   *
+   * @return object
+   *
+   * @see http://sickbeard.com/api/#sb.searchtvdb
+   */
+  SickbeardSB.prototype.searchTVDB = function(args) {
+    var delegate  = this.delegate;
+
+    return delegate.cmd('sb.searchtvdb', args).then(function(response){
+      return response;
+    });
+  };
+
+  /**
+   *	Set default settings for SickBeard.
+   *
+   *  @param object args
+   *  Arguments to be passed with the call:
+   *    future_show_paused		0 - exclude paused shows on coming ep
+	 *													1 - include paused shows on coming ep
+	 *
+	 *	  status									wanted, skipped, archived, ignored
+	 *
+	 *		flatten_folders				0 - use season folders if part of rename string
+	 *		 											1 - do not use season folders
+	 *
+	 *		initial								multiple types can be passed when delimited by |
+	 *		 											sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
+	 *		 											fullhdwebdl, hdbluray, fullhdbluray, unknown
+	 *
+	 *		archived							multiple types can be passed when delimited by |
+	 *		 											sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
+	 *		 											fullhdwebdl, hdbluray, fullhdbluray
+   *
+   *	@return object
+   *
+   * 	@see http://sickbeard.com/api/#sb.setdefaults
+   */
+  SickbeardSB.prototype.setDefaults = function(args) {
+    var delegate  = this.delegate;
+
+    return delegate.cmd('sb.setdefaults', args).then(function(response){
+      return response;
+    });
+  };
+
+  /**
+   * Shutdown SickBeard.
+   *
+   * @return object
+   *
+   * @see http://sickbeard.com/api/#sb.shutdown
+   */
+  SickbeardSB.prototype.shutDown = function() {
+    var delegate  = this.delegate;
+
+    return delegate.cmd('sb.shutdown').then(function(response){
+      return response;
+    });
+  };
+
 })();
