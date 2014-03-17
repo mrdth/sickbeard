@@ -30,14 +30,16 @@
    *
    * @param object args
    *   Arguments to be passed with the call:
-   *     tvdbid:  tvdbid unique show id
-   *     location: path to existing show folder
+   *     tvdbid:          tvdbid unique show id
+   *     location:        path to existing show folder
    *     flatten_folders: 0 - use season folders if part of rename string
    *                      1 - do not use season folders
-   *     initial: initial quality, multiple types can be passed when delimited by |
-   *              sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl, hdbluray, fullhdbluray, unknown
-   *     archive: multiple types can be passed when delimited by |
-   *              sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl, hdbluray, fullhdbluray
+   *     initial:         initial quality, multiple types can be passed when delimited by |
+   *              					sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
+   *              					fullhdwebdl, hdbluray, fullhdbluray, unknown
+   *     archive:         multiple types can be passed when delimited by |
+   *              					sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
+   *              					fullhdwebdl, hdbluray, fullhdbluray
    *
    * @return object
    *
@@ -56,16 +58,18 @@
    *
    * @param object args
    *   Arguments to be passed with the call:
-   *     tvdbid:  tvdbid unique show id
-   *     location: path to create show folder
-   *     lang: two letter tvdb language, en = english
-   *     status: wanted, skipped, archived, ignored
+   *     tvdbid:          tvdbid unique show id
+   *     location:        path to create show folder
+   *     lang: 						two letter tvdb language, en  = english
+   *     status:          wanted, skipped, archived, ignored
    *     flatten_folders: 0 - use season folders if part of rename string
    *                      1 - do not use season folders
-   *     initial: initial quality, multiple types can be passed when delimited by |
-   *              sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl, hdbluray, fullhdbluray, unknown
-   *     archive: multiple types can be passed when delimited by |
-   *              sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl, hdbluray, fullhdbluray
+   *     initial:         initial quality, multiple types can be passed when delimited by |
+   *              					sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
+   *              					fullhdwebdl, hdbluray, fullhdbluray, unknown
+   *     archive:         multiple types can be passed when delimited by |
+   *              					sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
+   *              					fullhdwebdl, hdbluray, fullhdbluray
    *
    * @return object
    *
@@ -184,8 +188,8 @@
    * @param object args
    *   Arguments to be passed with the call:
    *     tvdbid: tvdbid unique show id
-   *     pause: 0 - unpause show
-   *            1 - pause show
+   *     pause:  0 - unpause show
+   *             1 - pause show
    *
    * @return object
    *
@@ -224,7 +228,7 @@
    * @param object args
    *   Arguments to be passed with the call:
    *     tvdbid: tvdbid unique show id
-   *     sort: asc, [desc]
+   *     sort:   asc, [desc]
    *
    * @return object
    *
@@ -265,9 +269,11 @@
    *   Arguments to be passed with the call:
    *     tvdbid: tvdbid unique show id
    *     initial: multiple types can be passed when delimited by |
-   *              sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl, hdbluray, fullhdbluray, unknown
+   *              	sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl,
+   *              	hdbluray, fullhdbluray, unknown
    *     archive: multiple types can be passed when delimited by |
-   *              sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl, hdbluray, fullhdbluray
+   *              	sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl, fullhdwebdl,
+   *              	hdbluray, fullhdbluray
    *
    * @return object
    *

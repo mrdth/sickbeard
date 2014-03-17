@@ -29,8 +29,8 @@
    *
    *   @param object args
    *   Arguments to be passed with the call:
-   *     location: full path to a root (parent) directory of tv shows
-   *     default: [0], 1
+   *     location: 	full path to a root (parent) directory of tv shows
+   *     default:   [0], 1
    *
    * @return object
    *
@@ -65,7 +65,7 @@
    *
    *   @param object args
    *   Arguments to be passed with the call:
-   *     location: full path to a root (parent) directory of tv shows
+   *     location:  "value", "value", full path to a root (parent) directory of tv shows
    *
    * @return object
    *
@@ -194,10 +194,11 @@
    *
    *   @param object args
    *   Arguments to be passed with the call:
-   *     name	show name
-   *     tvdbid tvdbid unique show id
-   *     lang two letter tvdb language, en = english
-   *     		[en], zh, hr, cs, da, nl, fi, fr, de, el, he, hu, it, ja, ko, no, pl, pt, ru, sl, es, sv, tr
+   *     name:		show name
+   *     tvdbid:	tvdbid unique show id
+   *     lang:		two letter tvdb language, en = english
+   *     						[en], zh, hr, cs, da, nl, fi, fr, de, el, he, hu, it, ja,
+   *     						ko, no, pl, pt, ru, sl, es, sv, tr
    *
    * @return object
    *
@@ -216,19 +217,19 @@
    *
    *  @param object args
    *  Arguments to be passed with the call:
-   *    future_show_paused		0 - exclude paused shows on coming ep
-	 *													1 - include paused shows on coming ep
+   *    future_show_paused:	0 - exclude paused shows on coming ep
+	 *												1 - include paused shows on coming ep
 	 *
-	 *	  status									wanted, skipped, archived, ignored
+	 *	  status:							wanted, skipped, archived, ignored
 	 *
-	 *		flatten_folders				0 - use season folders if part of rename string
+	 *		flatten_folders:			0 - use season folders if part of rename string
 	 *		 											1 - do not use season folders
 	 *
-	 *		initial								multiple types can be passed when delimited by |
+	 *		initial:							multiple types can be passed when delimited by |
 	 *		 											sdtv, sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
 	 *		 											fullhdwebdl, hdbluray, fullhdbluray, unknown
 	 *
-	 *		archived							multiple types can be passed when delimited by |
+	 *		archived:							multiple types can be passed when delimited by |
 	 *		 											sddvd, hdtv, rawhdtv, fullhdtv, hdwebdl,
 	 *		 											fullhdwebdl, hdbluray, fullhdbluray
    *
